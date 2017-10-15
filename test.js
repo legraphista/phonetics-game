@@ -3,7 +3,7 @@ const helpers = require('./src/helpers');
 console.timeEnd('loading');
 
 const gridCount = 9;
-const lettersPerCell = 2;
+const lettersPerCell = 4;
 
 for (let i = 0; i < 40; i++) {
   console.log(i);

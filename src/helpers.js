@@ -80,7 +80,8 @@ helpers.splitWords = ({ words, lettersPerCell }) => {
 };
 
 helpers.getSeedWord = ({ lettersPerCell, multiplier = 2 }) => {
-  const len = lettersPerCell * multiplier;
+  // clip this as we don't have words that big
+  const len = Math.min(12, lettersPerCell * multiplier);
 
   const words = helpers.getSeedWord.cache.has(len) ?
     helpers.getSeedWord.cache.get(len) :
